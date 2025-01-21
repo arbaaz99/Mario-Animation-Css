@@ -1,0 +1,256 @@
+/* MARIO EXAMPLE-2 */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 0.825rem solid grey;
+  border-bottom: 0.825rem solid grey;
+  width: 100%;
+}
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  margin-top: 5rem;
+}
+
+.wind img {
+  width: 12rem;
+  opacity: 1;
+  animation: mario 80s linear infinite reverse;
+}
+
+.cloud img {
+  position: absolute;
+  top: 35%;
+  left: 1%;
+  width: 12rem;
+  opacity: 0.6;
+  animation: mario 50s linear infinite reverse;
+}
+.mario {
+  position: absolute;
+  width: 6rem;
+  top: -40px;
+  left: 0px;
+  animation-name: mario;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation: mario 5s linear infinite normal, jump 0.3s 1.2s ease;
+}
+
+.luigi {
+  width: 6rem;
+  position: absolute;
+  top: 4rem;
+  animation-name: mario;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+@keyframes mario {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translate(1650px);
+  }
+}
+@keyframes jump {
+  0% {
+    top: -40px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -40px;
+  }
+}
+/* NINJA POP-UP EXAMPLE-2 */
+/* 
+body {
+  margin: 0;
+  position: relative;
+}
+body.pop-up {
+  background: #222;
+}
+* {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+p {
+  margin-bottom: 40px;
+}
+#pop-up {
+  position: relative;
+  top: 200px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+#pop-up .container {
+  background: #f0e4d4;
+  padding: 30px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#pop-up input {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+button {
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  background: #333;
+  margin-left: -5px;
+  margin-left: -5px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+.cross {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #555;
+  color: #ddd;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  border-radius: 11px;
+}
+#pop-up {
+  transform-origin: 10px 10px;
+  top: -400px;
+  animation: drop 2s 1s ease forwards, swing 2s 3s ease forwards;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(700px);
+  }
+  100% {
+    transform: translateY(670px);
+    opacity: 1;
+  }
+}
+@keyframes swing {
+  0% {
+    transform: translateY(670px) rotateZ(0deg);
+  }
+  40% {
+    transform: translateY(670px) rotateZ(90deg);
+  }
+  70% {
+    transform: translateY(670px) rotateZ(70deg);
+  }
+  100% {
+    transform: translateY(670px) rotateZ(75deg);
+  }
+} */
+
+/* BASKET EXAMPLE-3 */
+/* 
+header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.basket ul {
+  padding: 0;
+  margin-top: 40px;
+}
+.basket li {
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  margin: 30px 1.5%;
+  text-align: center;
+}
+.basket button {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.basket header div {
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+.basket header h1 {
+  float: left;
+}
+
+.zoom {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 55px;
+  opacity: 0;
+  animation: zoom 1s ease;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(455px);
+  }
+} */
